@@ -76,13 +76,34 @@ The **Discover** screen shows you one profile at a time in a card stack.
 ### Swiping
 - **Swipe Right** → **Like** — you're interested in this person
 - **Swipe Left** → **Pass** — skip to the next profile
-- **Swipe Up** → **Super Like** — show strong interest (the other person will know)
+- **Swipe Up** → **Super Like** — show strong interest (see below)
 
 ### Action Buttons
 If you prefer tapping over swiping, use the buttons below the card:
-- **Red X** (left) → Pass
-- **Gold Star** (center) → Super Like
-- **Green Heart** (right) → Like
+- **Red X** (Pass) → skip this person
+- **Gold Star** (Super Like) → show strong interest
+- **Green Heart** (Like) → you're interested
+
+### Daily Limits
+You have a limited number of swipes per day to keep things intentional:
+- **20 swipes per day** (Like, Pass, or Super Like all count)
+- **1 Super Like per day** (use it wisely!)
+- Your remaining swipes and Super Likes are shown in the top-right corner of the Discover screen
+- When you've used all your swipes, you'll see a "Daily limit reached" screen — come back tomorrow
+- **Pro users** get unlimited swipes and 5 Super Likes per day
+
+### Like vs Super Like
+
+| | Like | Super Like |
+|--|------|------------|
+| What it does | Shows interest | Shows **strong** interest |
+| Notification to them | None — sits quietly in their Likes tab | **Instant push notification**: "Someone Super Liked you!" |
+| Their Likes tab | Normal position | **Top of the list** with a purple **Super badge** |
+| Their Discover deck | Normal position | **First card they see** — jumps the entire queue |
+| Daily limit | 20/day (shared with all swipes) | 1/day |
+| Best for | General interest | Someone you really want to match with |
+
+**Tip:** Use your daily Super Like on someone you're genuinely excited about. They'll get an instant push notification AND see you as the very first card when they open Discover — much higher chance of a match.
 
 ### Profile Cards
 Each card shows:
@@ -91,6 +112,14 @@ Each card shows:
 - Location (city, state)
 - Denomination and church
 - Bio and life verse (tap the info icon to expand)
+
+### Smart Matching
+Aya shows you the most compatible profiles first, based on:
+1. **Preferred denominations** — your preferred denominations appear at the top of your deck
+2. **Distance** — people nearby are prioritised, but you'll also see people further away to fill your daily quota
+3. **Age range** — people in your preferred age range appear first, followed by those slightly outside it
+
+All preferences are soft — you'll always have profiles to swipe through. Best matches come first, less ideal ones fill the rest.
 
 ### How Matching Works
 - When you **Like** or **Super Like** someone and they do the same for you, it's a **match**
@@ -106,11 +135,15 @@ The **Matches** screen has two tabs:
 ### Matches Tab
 - Shows all your mutual matches (both of you liked each other)
 - Displays the date you matched
-- Tap on a match to open their profile or start a conversation
+- Tap "Message" to start a conversation
 
 ### Likes Tab
-- Shows people who have liked you but you haven't swiped on yet
-- Swipe right on their profile to match, or left to pass
+- Shows people who have liked or Super Liked you
+- Super Likes appear **first** with a purple "Super" badge
+- Each card has two buttons:
+  - **Like Back** — instantly creates a match and opens a conversation
+  - **Pass** — removes them from your Likes list
+- You don't need to find them in Discover — respond directly from here
 
 ---
 
