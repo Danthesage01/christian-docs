@@ -58,6 +58,13 @@ ayamatch.com (Vercel)          api.ayamatch.com (Railway/Render)
 - Verify Swagger docs: `https://api.ayamatch.com/docs` (should be disabled in production)
 - Test a health endpoint or login flow
 
+. For Railway/Render
+
+You can add the migration to your build command so it runs automatically on every deploy:
+
+npm install && npx prisma generate && npx prisma migrate deploy && npm run build
+This way every deploy applies any new migrations before starting the app.
+
 ---
 
 ## 3. Frontend Deployment (Vercel)
@@ -282,13 +289,13 @@ npx web-push generate-vapid-keys
 
 ### When to Scale
 
-| Signal | Action |
-|--------|--------|
-| API response > 500ms | Add backend instances |
-| DB connections maxed | Increase Supabase pool size |
-| Redis memory > 80% | Upgrade Upstash plan |
-| 10K+ concurrent WebSocket | Add Redis adapter for Socket.io |
-| Image uploads slow | Enable Cloudinary eager transforms |
+| Signal                    | Action                             |
+| ------------------------- | ---------------------------------- |
+| API response > 500ms      | Add backend instances              |
+| DB connections maxed      | Increase Supabase pool size        |
+| Redis memory > 80%        | Upgrade Upstash plan               |
+| 10K+ concurrent WebSocket | Add Redis adapter for Socket.io    |
+| Image uploads slow        | Enable Cloudinary eager transforms |
 
 ### Multi-Instance WebSocket
 
