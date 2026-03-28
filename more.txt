@@ -1,0 +1,15 @@
+Looking at what we have vs what competitors like Bumble, Hinge, and Badoo do, here's what I think is still missing:
+
+High priority:
+
+FAQ / Accordion — "Is Aya free?", "How does matching work?", "Is my data safe?", "What denominations are supported?" — reduces signup friction and builds trust
+Download / Install CTA — since this is a PWA, a section showing "Add to Home Screen" instructions with device mockups (iPhone + Android) — many users won't know it's installable
+Medium priority:
+3. "How We're Different" comparison — Home C has this (Aya vs other apps), but the main page doesn't. A quick side-by-side visual is very effective at converting users who've tried other apps
+4. Pricing / Pro tier preview — you mentioned Pro for counseling. A simple Free vs Pro comparison table sets expectations before signup
+
+Nice to have:
+5. Community / Blog teaser — "From the Aya Journal" with 2-3 article cards (e.g., "5 Questions to Ask Before Your First Date", "What the Bible Says About Courtship") — positions Aya as a thought leader, good for SEO too
+6. Trust & Safety detail — a dedicated section explaining moderation, verification, and reporting — important for a faith audience where safety is a top concern
+
+I'd recommend starting with FAQ and the comparison table — they're the highest-converting sections for a dating app landing page. Want me to add them?
