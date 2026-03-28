@@ -6,7 +6,33 @@ This document tracks planned features for future development.
 
 ## Pro / Premium Features
 
-### 1. Rewind (Undo Pass)
+### 1. Unlimited Swipes & Super Likes (Pro)
+**Priority:** High
+**Tier:** Pro
+**Status:** Free limits implemented, Pro upgrade gate needed
+
+Daily limits are enforced for free users:
+- Free: 20 swipes/day, 1 Super Like/day
+- Pro: Unlimited swipes, 5 Super Likes/day
+
+**What's already built:**
+- Backend enforces daily swipe count (20) and Super Like count (1) per user
+- `GET /matching/daily-limits` returns remaining counts
+- Frontend shows remaining swipes/super likes in header badges
+- Daily limit reached screen with "Upgrade to Pro" CTA
+- Super Like button grays out and shows "Used" when limit hit
+- Error messages guide users to upgrade
+
+**What's needed for Pro:**
+- User subscription model (isPro field or Subscription table)
+- Payment integration (Stripe/Paystack)
+- Backend: check isPro before enforcing limits
+- Frontend: Pro upgrade flow, payment page, subscription management
+- Increase Pro Super Like limit to 5/day
+
+---
+
+### 2. Rewind (Undo Pass)
 **Priority:** High
 **Tier:** Pro
 
@@ -78,7 +104,40 @@ Connect couples with verified, certified married counselors for faith-based rela
 
 ---
 
-### 3. See Who Liked You (Pro)
+### 3. Direct Message & Social Profiles (Pro)
+**Priority:** High
+**Tier:** Pro
+
+Pro users get enhanced communication and profile visibility.
+
+**How it works:**
+- Free users can only message people they've matched with
+- Pro users can send a "Direct Intro" message to anyone (limited to X per day)
+- Pro users can add social handles to their profile (Instagram, Twitter/X)
+- Social handles only visible to mutual matches (or Pro users who view your profile)
+- Prevents contact info exchange before meaningful connection
+
+**Backend changes needed:**
+- Add `instagramHandle`, `twitterHandle` fields to User model (optional)
+- Social fields only returned in public profile if viewer is Pro OR mutual match
+- "Direct Intro" endpoint: create a special message type without requiring match
+- Daily limit enforcement on direct intros
+- Pro subscription check middleware
+
+**Frontend changes needed:**
+- Social handle fields in profile edit
+- Social icons on profile view (only visible to eligible viewers)
+- "Send Intro" button on search/discover cards (Pro badge)
+- Pro gate: upgrade prompt for free users
+
+**Security:**
+- Chat moderation already blocks PII in messages (emails, phone numbers)
+- Social handles are opt-in and only visible to eligible users
+- No contact info exposed in search results or public profiles
+
+---
+
+### 4. See Who Liked You (Pro)
 **Priority:** High
 **Tier:** Pro
 
@@ -305,15 +364,16 @@ Native iOS + Android app (codebase exists at `/mobile`, ~60-70% complete).
 
 | Feature | Free | Pro |
 |---------|------|-----|
-| Swiping | ✅ | ✅ |
+| Daily swipes | 20/day | Unlimited |
+| Super Likes | 1/day | 5/day |
 | Matching | ✅ | ✅ |
-| Messaging | ✅ | ✅ |
-| Super Likes | 1/day | Unlimited |
+| Messaging (matched only) | ✅ | ✅ |
+| Direct Intro (no match needed) | ❌ | 3/day |
 | Rewind (undo pass) | ❌ | ✅ |
 | See who liked you | Count only | Full profiles |
+| Social handles visible | ❌ | ✅ |
 | Counselor sessions | ❌ | ✅ |
 | Profile boost | ❌ | ✅ |
-| Advanced filters | Basic | All |
 | Read receipts | ❌ | ✅ |
 | Ad-free | ❌ | ✅ |
 
